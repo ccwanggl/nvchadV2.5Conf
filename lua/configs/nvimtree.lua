@@ -1,4 +1,5 @@
-local options =  {
+local options =
+{
     git = {
         enable = false,
     },
@@ -17,4 +18,5 @@ local options =  {
     },
 }
 
-require ("nvim-tree").setup(options)
+require("nvim-tree").setup(options)
+
