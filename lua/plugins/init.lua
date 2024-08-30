@@ -91,7 +91,9 @@ return
         "lua",
         "vimdoc",
         "html",
-        "css"
+        "css",
+        "cpp",
+        "c",
       },
     },
   },
