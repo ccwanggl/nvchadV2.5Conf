@@ -12,5 +12,14 @@ M.ui = {
 	-- 	["@comment"] = { italic = true },
 	-- },
 }
+M.mason={
+  pkgs = {
+      "lua-language-server",
+      "stylua",
+      "html-lsp",
+      "css-lsp" ,
+      "prettier",
+  }
+}
 
 return M

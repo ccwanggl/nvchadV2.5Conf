@@ -1,4 +1,4 @@
-return 
+return
 {
   {
     "stevearc/conform.nvim",
@@ -58,18 +58,6 @@ return
     end,
   },
 --
-  {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "lua-language-server",
-        "stylua",
-        "html-lsp",
-        "css-lsp" ,
-        "prettier"
-      },
-    },
-  },
 
   {
      "williamboman/mason-lspconfig.nvim",
@@ -109,5 +97,11 @@ return
     config = function()
       require("telescope").load_extension("import")
     end
-  }
+  },
+  {
+    "chrisgrieser/nvim-recorder",
+    event = "BufRead",
+    dependencies = "rcarriga/nvim-notify", -- optional
+    opts = {}, -- required even with default settings, since it calls `setup()`
+  },
 }

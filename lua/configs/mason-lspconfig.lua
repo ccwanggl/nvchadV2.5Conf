@@ -16,7 +16,8 @@ local options =
         "jsonls",
         "r_language_server",
         "yamlls",
-        "golangci_lint_ls"
+        "golangci_lint_ls",
+        "ts_ls"
     },
 }
 
