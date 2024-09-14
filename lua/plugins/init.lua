@@ -97,8 +97,8 @@ return
       },
     },
   },
-    {
-      "p00f/clangd_extensions.nvim",
-      ft = {"c", "cpp"}
-    },
+  {
+    "p00f/clangd_extensions.nvim",
+    ft = {"c", "cpp"}
+  },
 }
