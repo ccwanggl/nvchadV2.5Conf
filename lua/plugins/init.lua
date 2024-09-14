@@ -97,8 +97,17 @@ return
       },
     },
   },
+
   {
     "p00f/clangd_extensions.nvim",
     ft = {"c", "cpp"}
   },
+
+  {
+    'piersolenski/telescope-import.nvim',
+    dependencies = 'nvim-telescope/telescope.nvim',
+    config = function()
+      require("telescope").load_extension("import")
+    end
+  }
 }
