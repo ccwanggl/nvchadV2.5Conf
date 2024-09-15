@@ -98,10 +98,21 @@ return
       require("telescope").load_extension("import")
     end
   },
+
   {
     "chrisgrieser/nvim-recorder",
     event = "BufRead",
     dependencies = "rcarriga/nvim-notify", -- optional
     opts = {}, -- required even with default settings, since it calls `setup()`
   },
+
+  {
+    'simonmclean/triptych.nvim',
+    event = 'VeryLazy',
+    dependencies = {
+      'nvim-lua/plenary.nvim', -- required
+      'nvim-tree/nvim-web-devicons', -- optional
+    },
+  opts = {},
+  }
 }
