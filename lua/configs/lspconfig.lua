@@ -6,7 +6,8 @@ local capabilities = require("nvchad.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 local servers = {
   "clangd",
-  "gopls"
+  "gopls",
+  "marksman"
 }
 
 -- lsps with default config
@@ -18,3 +19,7 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+
+lspconfig.marksman.setup{
+  filetype ={ "markdown", "markdown.mdx"}
+}
