@@ -7,7 +7,7 @@ local lspconfig = require "lspconfig"
 local servers = {
   "clangd",
   "gopls",
-  "marksman"
+  "marksman",
 }
 
 -- lsps with default config
@@ -23,3 +23,31 @@ end
 lspconfig.marksman.setup{
   filetype ={ "markdown", "markdown.mdx"}
 }
+
+--NOTE: configuration for neocmakelsp
+local nvim_lsp = require("lspconfig")
+local nvim_configs = require("lspconfig.configs")
+
+if not nvim_configs.neocmake then
+    nvim_configs.neocmake = {
+        default_config = {
+            cmd = { "neocmakelsp", "--stdio" },
+            filetypes = { "cmake" },
+            root_dir = function(fname)
+                return nvim_lsp.util.find_git_ancestor(fname)
+            end,
+            single_file_support = true,-- suggested
+            on_attach = on_attach, -- on_attach is the on_attach function you defined
+            init_options = {
+                format = {
+                    enable = true
+                },
+                lint = {
+                    enable = true
+                },
+                scan_cmake_in_package = true -- default is true
+            }
+        }
+    }
+    nvim_lsp.neocmake.setup({})
+end
