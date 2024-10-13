@@ -6,7 +6,7 @@ local options =
         "clangd",
         "neocmake",
         "bashls",
-        "powershell_es",
+--        "powershell_es",
         "rust_analyzer",
         "marksman",
         "eslint",

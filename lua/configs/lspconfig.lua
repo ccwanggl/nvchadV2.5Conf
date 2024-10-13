@@ -9,7 +9,6 @@ local servers = {
   "gopls",
   "marksman",
   "rust_analyzer",
-  "powershell_es"
 }
 
 -- lsps with default config
