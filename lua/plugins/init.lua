@@ -165,7 +165,7 @@ return
         vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
     end,
   },
-    {
+  {
     'MeanderingProgrammer/render-markdown.nvim',
     dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
     -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
@@ -183,6 +183,7 @@ return
   },
   { "nvchad/volt" , lazy = true },
   { "nvchad/menu" , lazy = true },
+
 
   {
     "nvimdev/lspsaga.nvim",
