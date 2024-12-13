@@ -9,6 +9,7 @@ local servers = {
   "gopls",
   "marksman",
   "yamlls"
+  "rust_analyzer",
 }
 
 -- lsps with default config

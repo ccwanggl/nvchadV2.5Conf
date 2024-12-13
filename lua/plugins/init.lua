@@ -174,5 +174,26 @@ return
     ---@type render.md.UserConfig
     opts = {},
   },
+  {
+      "TheLeoP/powershell.nvim",
+      ---@type powershell.user_config
+      opts = {
+        bundle_path = vim.fn.stdpath "data" .. "/mason/packages/powershell-editor-services",
+      }
+  },
+  { "nvchad/volt" , lazy = true },
+  { "nvchad/menu" , lazy = true },
 
+
+  {
+    "nvimdev/lspsaga.nvim",
+    config = function()
+        require('lspsaga').setup({})
+    end,
+    ft = {'c','cpp', 'lua', 'rust', 'go'},
+    dependencies = {
+        'nvim-treesitter/nvim-treesitter', -- optional
+        'nvim-tree/nvim-web-devicons',     -- optional
+    }
+  },
 }
