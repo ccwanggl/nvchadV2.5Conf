@@ -8,6 +8,7 @@ local servers = {
   "clangd",
   "gopls",
   "marksman",
+  "yamlls"
 }
 
 -- lsps with default config
