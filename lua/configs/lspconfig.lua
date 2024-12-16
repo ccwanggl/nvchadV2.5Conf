@@ -8,7 +8,7 @@ local servers = {
   "clangd",
   "gopls",
   "marksman",
-  "yamlls"
+  "yamlls",
   "rust_analyzer",
 }
 
