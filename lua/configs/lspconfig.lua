@@ -11,7 +11,7 @@ local servers = {
   "yamlls",
   "rust_analyzer",
   "pyright",
-  "slint-lsp"
+  "slint_lsp"
 }
 
 -- lsps with default config
