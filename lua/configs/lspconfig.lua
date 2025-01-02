@@ -10,7 +10,8 @@ local servers = {
   "marksman",
   "yamlls",
   "rust_analyzer",
-  "pyright"
+  "pyright",
+  "slint-lsp"
 }
 
 -- lsps with default config
