@@ -28,9 +28,6 @@ lspconfig.marksman.setup{
   filetype ={ "markdown", "markdown.mdx"}
 }
 
-lspconfig.slint_lsp.setup{
-  filetype ={ "slint"}
-}
 --NOTE: configuration for neocmakelsp
 local nvim_lsp = require("lspconfig")
 local nvim_configs = require("lspconfig.configs")

@@ -184,6 +184,9 @@ return
   { "nvchad/volt" , lazy = true },
   { "nvchad/menu" , lazy = true },
 
+  {
+    "slint-ui/vim-slint",
+  },
 
   {
     "nvimdev/lspsaga.nvim",
