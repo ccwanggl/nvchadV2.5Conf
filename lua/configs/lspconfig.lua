@@ -8,7 +8,10 @@ local servers = {
   "clangd",
   "gopls",
   "marksman",
+  "yamlls",
   "rust_analyzer",
+  "pyright",
+  "slint_lsp"
 }
 
 -- lsps with default config

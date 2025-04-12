@@ -188,6 +188,11 @@ return
   { "nvchad/volt" , lazy = true },
   { "nvchad/menu" , lazy = true },
   {
+    "slint-ui/vim-slint",
+    ft = {'.slint'}
+  },
+
+  {
     "nvimdev/lspsaga.nvim",
     config = function()
         require('lspsaga').setup({})
