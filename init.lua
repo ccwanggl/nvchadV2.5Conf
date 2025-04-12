@@ -1,3 +1,7 @@
+if vim.g.vscode then
+  local options = {noremap = true}
+  vim.keymap.set("i", "jk", "<Esc>", options)
+else
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/nvchad/base46/"
 vim.g.mapleader = " "
 
@@ -37,3 +41,4 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+end
