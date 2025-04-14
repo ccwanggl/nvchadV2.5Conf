@@ -9,9 +9,10 @@ local servers = {
   "gopls",
   "marksman",
   "yamlls",
+  "lua_ls",
   "rust_analyzer",
   "pyright",
-  "slint_lsp"
+  "slint_lsp",
 }
 
 -- lsps with default config
@@ -26,6 +27,12 @@ end
 
 lspconfig.marksman.setup{
   filetype ={ "markdown", "markdown.mdx"}
+}
+
+lspconfig.nil_ls.setup{
+  cmd={"nil"},
+  filetype ={ "nix"},
+  single_file_support = true
 }
 
 --NOTE: configuration for neocmakelsp
