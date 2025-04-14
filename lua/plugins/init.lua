@@ -97,6 +97,7 @@ return
   },
   {
     "folke/todo-comments.nvim",
+    event="VeryLazy",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
     -- your configuration comes here
@@ -106,8 +107,9 @@ return
   },
   {
   "folke/trouble.nvim",
-  opts = {}, -- for default options, refer to the configuration section for custom setup.
+    opts = {}, -- for default options, refer to the configuration section for custom setup.
     cmd = "Trouble",
+    event = "VeryLazy",
     keys = {
       {
         "<leader>xx",
