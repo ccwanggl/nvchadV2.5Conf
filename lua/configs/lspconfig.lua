@@ -13,6 +13,8 @@ local servers = {
   "rust_analyzer",
   "pyright",
   "slint_lsp",
+  "jsonls",
+  "taplo"
 }
 
 -- lsps with default config
