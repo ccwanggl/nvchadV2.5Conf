@@ -27,7 +27,7 @@ end
 
 
 if (name == "Mac" or name == "Linux") then
-    table.remove(options.ensure_installed, get_os_name.tablefind(options.ensure_installed, "powershell_es"))
+    table.remove(options.ensure_installed, osname.tablefind(options.ensure_installed, "powershell_es"))
 end
 
 return options
