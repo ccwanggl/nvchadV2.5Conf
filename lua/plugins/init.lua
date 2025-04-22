@@ -10,10 +10,24 @@ return
 
   {
     "nvim-tree/nvim-tree.lua",
-    config = function()
-      require "configs.nvimtree"
-    end,
+    opts = {
+      git = {
+        enable = false,
+      },
 
+      view = {
+        adaptive_size = true,
+      },
+
+      renderer = {
+        highlight_git = false,
+        icons = {
+          show = {
+            git = false,
+          },
+        },
+      },
+    }
   },
 
   {
@@ -208,6 +222,7 @@ return
         'nvim-tree/nvim-web-devicons',     -- optional
     }
   },
+
 ---@type LazySpec
   {
     "mikavilpas/yazi.nvim",
