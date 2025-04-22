@@ -31,6 +31,16 @@ return
   },
 
   {
+    "dstein64/vim-startuptime",
+    -- lazy-load on a command
+    cmd = "StartupTime",
+    -- init is called during startup. Configuration for vim plugins typically should be set in an init function
+    init = function()
+      vim.g.startuptime_tries = 10
+    end,
+  },
+
+  {
     "nyngwang/NeoZoom.lua",
     event = "BufRead",
     config = function()
@@ -221,6 +231,30 @@ return
         'nvim-treesitter/nvim-treesitter', -- optional
         'nvim-tree/nvim-web-devicons',     -- optional
     }
+  },
+
+  {
+    "folke/snacks.nvim",
+    priority = 1000,
+    lazy = false,
+    ---@type snacks.Config
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+      bigfile = { enabled = true },
+      dashboard = { enabled = true },
+      explorer = { enabled = true },
+      indent = { enabled = true },
+      input = { enabled = true },
+      picker = { enabled = true },
+      notifier = { enabled = true },
+      quickfile = { enabled = true },
+      scope = { enabled = true },
+      scroll = { enabled = true },
+      statuscolumn = { enabled = true },
+      words = { enabled = true },
+    },
   },
 
 ---@type LazySpec
