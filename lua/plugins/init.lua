@@ -301,4 +301,20 @@ return
       vim.g.loaded_netrwPlugin = 1
     end,
   },
+
+  {
+      'Civitasv/cmake-tools.nvim',
+      opts = {}
+  },
+
+  {
+      'akinsho/toggleterm.nvim',
+      version = "*",
+      opts = {}
+  },
+
+  {
+    'stevearc/overseer.nvim',
+    opts = {},
+  },
 }
