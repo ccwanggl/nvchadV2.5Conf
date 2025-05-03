@@ -1,21 +1,21 @@
 return {
-    "nvim-tree/nvim-tree.lua",
-    opts = {
-      git = {
-        enable = false,
-      },
+  "nvim-tree/nvim-tree.lua",
+  opts = {
+    git = {
+      enable = true,
+    },
 
-      view = {
-        adaptive_size = true,
-      },
+    view = {
+      adaptive_size = true,
+    },
 
-      renderer = {
-        highlight_git = false,
-        icons = {
-          show = {
-            git = false,
-          },
+    renderer = {
+      highlight_git = true,
+      icons = {
+        show = {
+          git = true,
         },
       },
-    }
-  }
+    },
+  },
+}
