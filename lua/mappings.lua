@@ -6,7 +6,7 @@ vim.keymap.set({"i","n","v"}, "<leader>fp", "<cmd> NeoZoomToggle <CR>", {desc = 
 
 -- Keyboard users
 vim.keymap.set("n", "<C-t>", function()
-  require("menu").open("default")
+  require("menu").open "default"
 end, {})
 
 -- mouse users + nvimtree users!

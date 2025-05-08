@@ -11,7 +11,8 @@ local servers = {
   "yamlls",
   "lua_ls",
   "rust_analyzer",
-  "pyright",
+  --"pyright",
+  "basedpyright",
   "slint_lsp",
   "jsonls",
   "taplo"
