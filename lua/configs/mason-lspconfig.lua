@@ -19,7 +19,6 @@ local options =
         "golangci_lint_ls",
         "nil_ls",
         "ts_ls",
-        "ruff"
     },
 }
 if name == "Windows" then

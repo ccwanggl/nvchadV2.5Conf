@@ -1,9 +1,8 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
-    python = { "ruff" },
     cpp = { "clang-format" },
-    -- css = { "prettier" },
+    -- cmake = { "cmakelang" },
     -- html = { "prettier" },
   },
 
