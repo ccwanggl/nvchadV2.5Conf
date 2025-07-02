@@ -1,8 +1,7 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
-    cpp = { "clang-format" },
-    -- cmake = { "cmakelang" },
+    -- css = { "prettier" },
     -- html = { "prettier" },
   },
 
@@ -13,4 +12,4 @@ local options = {
   -- },
 }
 
-require("conform").setup(options)
+return options

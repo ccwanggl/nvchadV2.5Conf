@@ -1,49 +1,15 @@
--- EXAMPLE 
-local on_attach = require("nvchad.configs.lspconfig").on_attach
-local on_init = require("nvchad.configs.lspconfig").on_init
-local capabilities = require("nvchad.configs.lspconfig").capabilities
+require("nvchad.configs.lspconfig").defaults()
 
-local lspconfig = require "lspconfig"
 local servers = {
+  "html",
+  "cssls",
   "clangd",
-  "gopls",
-  "marksman",
-  "yamlls",
-  "lua_ls",
-  "rust_analyzer",
-  "pyright",
-  "basedpyright",
-  "slint_lsp",
-  "jsonls",
-  "taplo"
+  "ty",
+  "neocmake",
 }
+vim.lsp.enable(servers)
 
--- lsps with default config
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    on_attach = on_attach,
-    on_init = on_init,
-    capabilities = capabilities,
-  }
-end
-
-
-lspconfig.marksman.setup{
-  filetype ={ "markdown", "markdown.mdx"}
-}
-
-lspconfig.nil_ls.setup{
-  cmd={"nil"},
-  filetype ={ "nix"},
-  single_file_support = true
-}
-
---NOTE: configuration for neocmakelsp
-local nvim_lsp = require("lspconfig")
-local nvim_configs = require("lspconfig.configs")
-
-if not nvim_configs.neocmake then
-    nvim_configs.neocmake = {
+vim.lsp.config.neocmake = {
         default_config = {
             cmd = { "neocmakelsp", "--stdio" },
             filetypes = { "cmake" },
@@ -62,6 +28,5 @@ if not nvim_configs.neocmake then
                 scan_cmake_in_package = true -- default is true
             }
         }
-    }
-    nvim_lsp.neocmake.setup({})
-end
+}
+-- read :h vim.lsp.config for changing options of lsp servers 
