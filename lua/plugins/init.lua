@@ -27,7 +27,6 @@ return {
         "css",
         "cpp",
         "c",
-        "latex",
         "json",
         "rust",
         "python"
@@ -118,6 +117,7 @@ return {
     },
   },
 
+-- Hightlight, list and search  todo comments in project
   {
     "folke/todo-comments.nvim",
     event="VeryLazy",
