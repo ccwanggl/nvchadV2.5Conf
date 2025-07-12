@@ -119,33 +119,43 @@ return {
     },
     
     {
-    "folke/todo-comments.nvim",
-    event="VeryLazy",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-    }
+        "folke/todo-comments.nvim",
+        event="VeryLazy",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        opts = {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+        }
     },
     
     {
-    "nyngwang/NeoZoom.lua",
-    event = "BufRead",
-    opts={}
+        "nyngwang/NeoZoom.lua",
+        event = "BufRead",
+        opts={}
     },
     {
         "p00f/clangd_extensions.nvim",
     },
 
     {
-    'MeanderingProgrammer/render-markdown.nvim',
-    dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
-    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
-    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
-    ---@module 'render-markdown'
-    ---@type render.md.UserConfig
-    opts = {},
-}
+        'MeanderingProgrammer/render-markdown.nvim',
+        dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
+        -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
+        -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+        ---@module 'render-markdown'
+        ---@type render.md.UserConfig
+        opts = {},
+    },
+    {
+        'tigion/nvim-asciidoc-preview',
+        ft = { 'asciidoc' },
+        build = 'cd server && npm install --omit=dev',
+        ---@module 'asciidoc-preview'
+        ---@type asciidoc-preview.Config
+        opts = {
+          -- Add user configuration here
+        },
+    },
 
 }
