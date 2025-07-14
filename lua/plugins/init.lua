@@ -1,26 +1,26 @@
 return {
-  {
+    {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
     opts = require "configs.conform",
-  },
-
-  -- These are some examples, uncomment them if you want to see them work!
-  {
+    },
+    
+    -- These are some examples, uncomment them if you want to see them work!
+    {
     "neovim/nvim-lspconfig",
     config = function()
       require "configs.lspconfig"
     end,
-  },
-
-  -- test new blink
-  { import = "nvchad.blink.lazyspec" },
-
-  {
-  	"nvim-treesitter/nvim-treesitter",
-  	opts = {
-  		ensure_installed = {
-  			"vim",
+    },
+    
+    -- test new blink
+    { import = "nvchad.blink.lazyspec" },
+    
+    {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+        ensure_installed = {
+            "vim",
         "lua",
         "vimdoc",
         "html",
@@ -30,11 +30,11 @@ return {
         "json",
         "rust",
         "python"
-  		},
-  	},
-  },
-
-  {
+        },
+    },
+    },
+    
+    {
     "mikavilpas/yazi.nvim",
     event = "VeryLazy",
     dependencies = {
@@ -76,10 +76,10 @@ return {
       -- vim.g.loaded_netrw = 1
       vim.g.loaded_netrwPlugin = 1
     end,
-  },
-
-  {
-  "folke/trouble.nvim",
+    },
+    
+    {
+    "folke/trouble.nvim",
     opts = {}, -- for default options, refer to the configuration section for custom setup.
     cmd = "Trouble",
     event = "VeryLazy",
@@ -115,23 +115,56 @@ return {
         desc = "Quickfix List (Trouble)",
       },
     },
-  },
+    },
+    
+    {
+        "folke/todo-comments.nvim",
+        event="VeryLazy",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        opts = {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+        }
+    },
+    
+    {
+        "nyngwang/NeoZoom.lua",
+        event = "BufRead",
+        opts={}
+    },
+    {
+        "p00f/clangd_extensions.nvim",
+    },
 
 -- Hightlight, list and search  todo comments in project
-  {
-    "folke/todo-comments.nvim",
-    event="VeryLazy",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-    }
-  },
-
-  {
-    "nyngwang/NeoZoom.lua",
-    event = "BufRead",
-    opts={}
-  },
+    {
+        "folke/todo-comments.nvim",
+        event="VeryLazy",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        opts = {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+        }
+    },
+    {
+        'MeanderingProgrammer/render-markdown.nvim',
+        dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
+        -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
+        -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+        ---@module 'render-markdown'
+        ---@type render.md.UserConfig
+        opts = {},
+    },
+    {
+        'tigion/nvim-asciidoc-preview',
+        ft = { 'asciidoc' },
+        build = 'cd server && npm install --omit=dev',
+        ---@module 'asciidoc-preview'
+        ---@type asciidoc-preview.Config
+        opts = {
+          -- Add user configuration here
+        },
+    },
 }
