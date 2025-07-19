@@ -27,7 +27,6 @@ return {
         "css",
         "cpp",
         "c",
-        "latex",
         "json",
         "rust",
         "python"
@@ -138,6 +137,17 @@ return {
         "p00f/clangd_extensions.nvim",
     },
 
+-- Hightlight, list and search  todo comments in project
+    {
+        "folke/todo-comments.nvim",
+        event="VeryLazy",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        opts = {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+        }
+    },
     {
         'MeanderingProgrammer/render-markdown.nvim',
         dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
@@ -301,5 +311,4 @@ return {
           -- Add user configuration here
         },
     },
-
 }
