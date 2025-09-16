@@ -34,6 +34,7 @@ M.mason = {
       "css-lsp" ,
       "ty",
       "prettier",
+      "rust-analyzer"
   }
 }
 
