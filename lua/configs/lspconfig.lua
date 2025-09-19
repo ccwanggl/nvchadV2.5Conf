@@ -10,6 +10,21 @@ local servers = {
 }
 vim.lsp.enable(servers)
 
+-- 在你的 init.lua 或配置文件中
+vim.lsp.config.clangd = {
+  cmd = {
+    "clangd",
+    "--compile-commands-dir=build", -- 假设 compile_commands.json 在项目根目录下的 build/ 文件夹内
+    -- 其他 clangd 参数，例如：
+    "--background-index",
+    "--clang-tidy",
+    "--all-scopes-completion",
+    "--cross-file-rename",
+    "--completion-style=detailed",
+  },
+  -- ... 其他配置 (on_attach, capabilities 等)
+}
+
 vim.lsp.config.neocmake = {
         default_config = {
             cmd = { "neocmakelsp", "--stdio" },
