@@ -417,36 +417,20 @@ return {
   },
 
   {
-    "3rd/diagram.nvim",
-    dependencies = {
-      { "3rd/image.nvim", opts = {} }, -- you'd probably want to configure image.nvim manually instead of doing this
-    },
-  opts = {
-    -- Disable automatic rendering for manual-only workflow
-    events = {
-      render_buffer = { "InsertLeave", "BufWinEnter", "TextChanged" },
-      clear_buffer = { "BufLeave" },
-    },
-    renderer_options = {
-      mermaid = {
-        theme = "dark",
-        scale = 2,
-      },
-    },
-  },
-    keys = {
-    {
-      "K", -- or any key you prefer
-      function()
-        require("diagram").show_diagram_hover()
-      end,
-      mode = "n",
-      ft = { "markdown", "norg" }, -- Only in these filetypes
-      desc = "Show diagram in new tab",
-    },
-  },
-    config = function()
-      require "configs.diagram"
-    end,
-  },
+  "selimacerbas/mermaid-playground.nvim",
+  dependencies = { "barrett-ruth/live-server.nvim" },
+  config = function()
+    require("mermaid_playground").setup({
+      -- all optional; sane defaults shown
+      workspace_dir = nil,                -- defaults to: $XDG_CONFIG_HOME/mermaid-playground
+      index_name    = "index.html",
+      diagram_name  = "diagram.mmd",
+      overwrite_index_on_start = false,   -- don't clobber your customized index.html
+      auto_refresh  = true,
+      auto_refresh_events = { "InsertLeave", "TextChanged", "TextChangedI", "BufWritePost" },
+      debounce_ms   = 450,
+      notify_on_refresh = false,
+    })
+  end,
+}
 }
