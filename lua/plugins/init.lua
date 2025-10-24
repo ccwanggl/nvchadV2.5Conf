@@ -415,4 +415,38 @@ return {
       vim.opt.foldlevelstart = 99
     end,
   },
+
+  {
+    "3rd/diagram.nvim",
+    dependencies = {
+      { "3rd/image.nvim", opts = {} }, -- you'd probably want to configure image.nvim manually instead of doing this
+    },
+  opts = {
+    -- Disable automatic rendering for manual-only workflow
+    events = {
+      render_buffer = { "InsertLeave", "BufWinEnter", "TextChanged" },
+      clear_buffer = { "BufLeave" },
+    },
+    renderer_options = {
+      mermaid = {
+        theme = "dark",
+        scale = 2,
+      },
+    },
+  },
+    keys = {
+    {
+      "K", -- or any key you prefer
+      function()
+        require("diagram").show_diagram_hover()
+      end,
+      mode = "n",
+      ft = { "markdown", "norg" }, -- Only in these filetypes
+      desc = "Show diagram in new tab",
+    },
+  },
+    config = function()
+      require "configs.diagram"
+    end,
+  },
 }

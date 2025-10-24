@@ -6,7 +6,8 @@ local servers = {
   "clangd",
   "ty",
   "neocmake",
-  "rust_analyzer"
+  "rust_analyzer",
+  "opencl_ls"
 }
 vim.lsp.enable(servers)
 

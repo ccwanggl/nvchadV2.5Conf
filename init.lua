@@ -37,4 +37,5 @@ else
   vim.schedule(function()
     require "mappings"
   end)
+  require("gitdiff_theme").setup()
 end
