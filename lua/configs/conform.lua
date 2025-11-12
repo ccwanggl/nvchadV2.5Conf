@@ -6,9 +6,9 @@ local options = {
 
     sh = { "shfmt" },
 
-    python = {"isort", "black"},
+    python = { "isort", "black" },
 
-    rust = {"rustfmt"}
+    rust = { "rustfmt" },
     -- css = { "prettier" },
     -- html = { "prettier" },
   },
@@ -16,6 +16,13 @@ local options = {
   formatters = {
     clang_format = {
       prepend_args = { "--style=file", "--fallback-style=LLVM" },
+    },
+
+    isort = {
+      command = "isort",
+      args = {
+        "-",
+      },
     },
   },
 
