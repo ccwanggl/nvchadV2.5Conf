@@ -6,8 +6,6 @@ local options = {
 
     sh = { "shfmt" },
 
-    cmake = { "cmakelang" },
-
     python = {"isort", "black"},
 
     rust = {"rustfmt"}
