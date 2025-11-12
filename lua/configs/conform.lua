@@ -19,8 +19,23 @@ local options = {
     },
 
     isort = {
+      include_trailing_comma = true,
       command = "isort",
       args = {
+        "--line-length",
+        "120",
+        "--lines-after-import",
+        "2",
+        "--quiet",
+        "-",
+      },
+    },
+    black = {
+      command = "black",
+      args = {
+        "--line-length",
+        "120",
+        "--quiet",
         "-",
       },
     },
