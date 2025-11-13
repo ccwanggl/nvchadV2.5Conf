@@ -417,25 +417,46 @@ return {
   },
 
   {
-      'barrett-ruth/live-server.nvim',
-      build = 'pnpm add -g live-server',
-      cmd = { 'LiveServerStart', 'LiveServerStop' },
-      ft = { "markdown" },
-      config = true
+    "barrett-ruth/live-server.nvim",
+    build = "pnpm add -g live-server",
+    cmd = { "LiveServerStart", "LiveServerStop" },
+    ft = { "markdown" },
+    config = true,
   },
 
   {
     "selimacerbas/mermaid-playground.nvim",
     ft = { "markdown" },
     opts = {
-        workspace_dir = ".mermaid-live",                -- defaults to: $XDG_CONFIG_HOME/mermaid-playground
-        index_name    = "index.html",
-        diagram_name  = "diagram.mmd",
-        overwrite_index_on_start = true,   -- don't clobber your customized index.html
-        auto_refresh  = true,
-        auto_refresh_events = { "InsertLeave", "TextChanged", "TextChangedI", "BufWritePost" },
-        debounce_ms   = 450,
-        notify_on_refresh = false,
-    }
-  }
+      workspace_dir = ".mermaid-live", -- defaults to: $XDG_CONFIG_HOME/mermaid-playground
+      index_name = "index.html",
+      diagram_name = "diagram.mmd",
+      overwrite_index_on_start = true, -- don't clobber your customized index.html
+      auto_refresh = true,
+      auto_refresh_events = { "InsertLeave", "TextChanged", "TextChangedI", "BufWritePost" },
+      debounce_ms = 450,
+      notify_on_refresh = false,
+    },
+  },
+
+  {
+    "kdheepak/lazygit.nvim",
+    lazy = true,
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile",
+    },
+    -- optional for floating window border decoration
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    -- setting the keybinding for LazyGit with 'keys' is recommended in
+    -- order to load the plugin when the command is run for the first time
+    keys = {
+      { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
+    },
+  },
 }
