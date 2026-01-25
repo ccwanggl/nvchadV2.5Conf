@@ -17,6 +17,7 @@ local options = {
     end,
 
     rust = { "rustfmt" },
+    cmake = {"gersemi"}
     -- css = { "prettier" },
     -- html = { "prettier" },
   },
@@ -45,11 +46,11 @@ local options = {
     },
   },
 
-  format_on_save = {
-    -- These options will be passed to conform.format()
-    timeout_ms = 500,
-    lsp_format = true,
-  },
+  -- format_on_save = {
+  --   -- These options will be passed to conform.format()
+  --   timeout_ms = 500,
+  --   lsp_format = true,
+  -- },
 }
 
 return options
