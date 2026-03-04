@@ -407,14 +407,6 @@ return {
   },
 
   {
-    "barrett-ruth/live-server.nvim",
-    build = "pnpm add -g live-server",
-    cmd = { "LiveServerStart", "LiveServerStop" },
-    ft = { "markdown" },
-    config = true,
-  },
-
-  {
     "selimacerbas/mermaid-playground.nvim",
     ft = { "markdown" },
     opts = {
