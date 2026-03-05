@@ -407,21 +407,6 @@ return {
   },
 
   {
-    "selimacerbas/mermaid-playground.nvim",
-    ft = { "markdown" },
-    opts = {
-      workspace_dir = ".mermaid-live", -- defaults to: $XDG_CONFIG_HOME/mermaid-playground
-      index_name = "index.html",
-      diagram_name = "diagram.mmd",
-      overwrite_index_on_start = true, -- don't clobber your customized index.html
-      auto_refresh = true,
-      auto_refresh_events = { "InsertLeave", "TextChanged", "TextChangedI", "BufWritePost" },
-      debounce_ms = 450,
-      notify_on_refresh = false,
-    },
-  },
-
-  {
     "kdheepak/lazygit.nvim",
     lazy = true,
     cmd = {
